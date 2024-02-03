@@ -88,12 +88,10 @@ const YourComponent = () => {
 				});
 
 				const result = await response.json();
-				result.options.forEach((option, index) => {
-					console.log(`Option ${index + 1} - Name: ${option.name}, Price: ${option.price}`);
-					setDeliveryCost(option);
 
-				});
-				console.log('Результат:', result);
+				setDeliveryCost(result.options);
+				console.log('Результаты:', result.options);
+				console.log('Результат:', result.options[0]);
 			} catch (error) {
 				console.error('Произошла ошибка при расчете доставки:', error);
 			}
@@ -139,13 +137,14 @@ const YourComponent = () => {
 			</form>
 			<button onClick={handleCalculateClick}>Рассчитать</button>
 
-			{deliveryCost !== null && (
-				<div className='result'>
+			{deliveryCost !== null && Array.isArray(deliveryCost) && deliveryCost.map((option, index) => (
+				<div key={index} className='result'>
 					<h3>Результаты расчета:</h3>
-					<p>Тип доставки: {deliveryCost.name}</p>
-					<p>Стоимость доставки: {deliveryCost.price}</p>
+					<p>Тип доставки: {option.name}</p>
+					<p>Стоимость доставки: {option.price}</p>
 				</div>
-			)}
+			))}
+
 		</>
 	);
 };

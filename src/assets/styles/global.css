@@ -191,3 +191,6 @@ select:focus {
 .result p {
 	margin: 10px 0;
 }
+.result h3 {
+	margin-top: 25px;
+}
