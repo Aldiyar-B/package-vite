@@ -1,5 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	background-color: rgb(59, 55, 49);
+	background-color: #f5f5f5;
 	color: black;
 }
 header {
@@ -7,6 +12,7 @@ header {
 	color: black;
 	padding: 10px;
 	display: flex;
+	margin: none;
 }
 nav ul {
 	list-style: none;
@@ -23,10 +29,9 @@ main {
 	margin: 20px;
 }
 form {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 15px;
 }
 button {
 	width: 100%;
@@ -70,7 +75,11 @@ select {
 	font-size: 12px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	margin-bottom: 15px;
 }
+/* option {
+	margin-bottom: 15px;
+} */
 select:focus {
 	outline: none;
 	border-color: #4d90fe;
@@ -140,21 +149,26 @@ select:focus {
 .left-panel img {
 	max-width: 100%;
 	height: auto;
-	margin-top: -150px;
+	margin-top: -50px;
 }
 .right-panel {
-	width: 50%;
+	width: 100%;
+	max-width: 500px;
+	min-width: 250px;
+	box-shadow: 2px -1px 50px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
 	height: 494px;
+	height: 100%;
 }
+
 .right-content {
 	display: flex;
 	max-width: 356px;
 	padding: 32px 72px;
-
+	border-radius: 15px;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 24px;
-	border-radius: var(--Card-radius, 24px);
 	background: var(--BG-Primary, #fff);
 }
 .deliveryDiv {
@@ -168,4 +182,11 @@ select:focus {
 }
 .deliveryDiv select {
 	margin-bottom: 6px;
+}
+
+.result {
+	margin-top: 30px;
+}
+.result p {
+	margin: 10px 0;
 }

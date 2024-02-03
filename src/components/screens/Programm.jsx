@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+
+
 const YourComponent = () => {
 	const [fromCityOptions, setFromCityOptions] = useState([]);
 	const [toCityOptions, setToCityOptions] = useState([]);
@@ -91,12 +93,12 @@ const YourComponent = () => {
 					setDeliveryCost(option);
 
 				});
-				console.log('Результат расчета:', result);
+				console.log('Результат:', result);
 			} catch (error) {
 				console.error('Произошла ошибка при расчете доставки:', error);
 			}
 		} else {
-			console.warn('Выберите размер посылки и города отправки и назначения.');
+			alert('Выберите размер посылки и города отправки и назначения.');
 		}
 	};
 
@@ -138,11 +140,10 @@ const YourComponent = () => {
 			<button onClick={handleCalculateClick}>Рассчитать</button>
 
 			{deliveryCost !== null && (
-				<div>
+				<div className='result'>
 					<h3>Результаты расчета:</h3>
-					<p>Стоимость доставки: {deliveryCost.name}</p>
+					<p>Тип доставки: {deliveryCost.name}</p>
 					<p>Стоимость доставки: {deliveryCost.price}</p>
-					{/* Add more details if available */}
 				</div>
 			)}
 		</>
