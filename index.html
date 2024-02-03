@@ -1,13 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+  <link rel="stylesheet" href="z.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <img src="./src/assets/images/Logo.png" alt="Логотип">
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Профиль</a>
+        </li>
+        <li>
+          <a href="#">История</a>
+        </li>
+        <li>
+          <a href="#">Войти / Выйти</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="panel">
+
+    <div class="left-panel">
+      <div class="left-content">
+        <img src="./src/assets/images/delivery.png" alt="Доставка">
+      </div>
+    </div>
+    <div id="right-panel" class="right-panel">
+      <div class="right-content" id="right-content">
+        <h2>Рассчитать доставку</h2>
+        <div class="deliveryDiv" id="deliveryDiv">
+        </div>
+        <div id="calculate">
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div id="root">
+      </div>
+      <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
